@@ -88,7 +88,9 @@ public class LipaNaMpesaRequest {
                     + " \"PartyA\": \"254722000011\","
                     + "\"PartyB\": \"174379\","
                     + " \"PhoneNumber\":" + PhoneNumber + ","
-                    + " \"CallBackURL\": \"https://shoppingcartapi20180317120238.azurewebsites.net/api/StkCallBack\","
+                          
+                    + " \"CallBackURL\": \"http://a6446933.ngrok.io\","
+                          //  + " \"CallBackURL\": \"https://shoppingcartapi20180317120238.azurewebsites.net/api/StkCallBack\","
                     + "\"AccountReference\": \"test234\","
                     + "\"TransactionDesc\": \"paying for eFarm prduct\""
                     + "}");
