@@ -89,7 +89,7 @@ public class LipaNaMpesaRequest {
                     + "\"PartyB\": \"174379\","
                     + " \"PhoneNumber\":" + PhoneNumber + ","
                           
-                    + " \"CallBackURL\": \"http://a6446933.ngrok.io\","
+                    + " \"CallBackURL\": \"http://1b8d1071.ngrok.io/test\","
                           //  + " \"CallBackURL\": \"https://shoppingcartapi20180317120238.azurewebsites.net/api/StkCallBack\","
                     + "\"AccountReference\": \"test234\","
                     + "\"TransactionDesc\": \"paying for eFarm prduct\""

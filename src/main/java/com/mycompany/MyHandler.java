@@ -29,6 +29,14 @@ public class MyHandler implements HttpHandler {
 		String response=IOUtils.toString(inputStream , StandardCharsets.UTF_8);
 		Gson gson = new Gson();
            LipaNaMpesaTransactionResponse lipaNaMpesaTransactionResponse =gson.fromJson(response,LipaNaMpesaTransactionResponse.class);
+           System.out.println(response);
+               //System.out.println(lipaNaMpesaTransactionResponse.getBody());
+              // System.out.println(Arrays.toString(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getCallbackMetadata().getItem()));
+            //  System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getCheckoutRequestID());
+             // System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getMerchantRequestID());
+           //  System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getResultCode());
+            // System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getResultDesc());
+               
            //Here i can now save records to db
         }
     }

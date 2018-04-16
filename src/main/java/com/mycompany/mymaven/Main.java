@@ -8,11 +8,13 @@ package com.mycompany.mymaven;
 import com.mycompany.AuthToken;
 import com.mycompany.LipaNaMpesaRequest;
 import com.mycompany.LipaNaMpesaTransactionResponse;
+import com.mycompany.Listen_To_Port_80;
 import com.mycompany.MyHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
+import java.util.Arrays;
 
 /**
  *
@@ -24,21 +26,25 @@ public class Main {
         authToken=  authToken.getAccessToken();
         
         System.out.println(authToken.getToken());
-          LipaNaMpesaRequest _LipaNaMpesaRequest=  LipaNaMpesaRequest.makeRequest(authToken.getToken(), "254705555285", 2);
+        LipaNaMpesaRequest _LipaNaMpesaRequest=  LipaNaMpesaRequest.makeRequest(authToken.getToken(), "254729302414", 1);
+         
           
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
         server.createContext("/test", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
        
-         System.out.println(_LipaNaMpesaRequest.getMerchantRequestID());
-          System.out.println(_LipaNaMpesaRequest.getResponseCode());
-          System.out.println(_LipaNaMpesaRequest.getCustomerMessage());
-          System.out.println(_LipaNaMpesaRequest.getCheckoutRequestID());
-         
+      //   System.out.println(_LipaNaMpesaRequest.getMerchantRequestID());
+          //System.out.println(_LipaNaMpesaRequest.getResponseCode());
+          //System.out.println(_LipaNaMpesaRequest.getCustomerMessage());
+          //System.out.println(_LipaNaMpesaRequest.getCheckoutRequestID());
           
-          LipaNaMpesaTransactionResponse _LipaNaMpesaTransactionResponse= new LipaNaMpesaTransactionResponse();
-          System.out.println(_LipaNaMpesaTransactionResponse.getBody());
+          //after transaction is succesfull
+       
+          
+         
+         
+         
          
     }
 }
