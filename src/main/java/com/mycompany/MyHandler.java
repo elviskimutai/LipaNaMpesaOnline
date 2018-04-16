@@ -14,6 +14,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import org.apache.commons.io.IOUtils;
 
 /**
@@ -30,12 +31,13 @@ public class MyHandler implements HttpHandler {
 		Gson gson = new Gson();
            LipaNaMpesaTransactionResponse lipaNaMpesaTransactionResponse =gson.fromJson(response,LipaNaMpesaTransactionResponse.class);
            System.out.println(response);
-               //System.out.println(lipaNaMpesaTransactionResponse.getBody());
-              // System.out.println(Arrays.toString(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getCallbackMetadata().getItem()));
-            //  System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getCheckoutRequestID());
-             // System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getMerchantRequestID());
-           //  System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getResultCode());
-            // System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getResultDesc());
+               System.out.println(lipaNaMpesaTransactionResponse.getBody());
+               System.out.println(Arrays.toString(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getCallbackMetadata().getItem()));
+             
+             System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getCheckoutRequestID());
+             System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getMerchantRequestID());
+           System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getResultCode());
+             System.out.println(lipaNaMpesaTransactionResponse.getBody().getStkCallback().getResultDesc());
                
            //Here i can now save records to db
         }

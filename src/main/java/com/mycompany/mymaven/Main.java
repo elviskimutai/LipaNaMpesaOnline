@@ -26,7 +26,7 @@ public class Main {
         authToken=  authToken.getAccessToken();
         
         System.out.println(authToken.getToken());
-        LipaNaMpesaRequest _LipaNaMpesaRequest=  LipaNaMpesaRequest.makeRequest(authToken.getToken(), "254729302414", 1);
+        LipaNaMpesaRequest _LipaNaMpesaRequest=  LipaNaMpesaRequest.makeRequest(authToken.getToken(), "254705555285", 1);
          
           
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
